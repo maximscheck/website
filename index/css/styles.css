@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../assets/fonts/Coolvetica Rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('../assets/fonts/AlteHaasGroteskBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'normal-body';
+  src: url('../assets/fonts/LinLibertine_R.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'italics-body';
+  src: url('../assets/fonts/LinLibertine_RI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'bold-body';
+  src: url('../assets/fonts/LinLibertine_RZ.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'italics-bold-body';
+  src: url('../assets/fonts/LinLibertine_RZI.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(30, 255, 0);
+  border-bottom: 2px solid black;
+  padding-left: 33px;
+  padding-top: 22px;
+  padding-bottom: 33px;
+  text-align: left;
+}
+
+.header h1 {
+  margin: 0px 0px 0px 0px;
+  font-size: 36px;
+  font-family: 'Coolvetica', sans-serif;
+}
+
+.header h1 a {
+  color: black;
+}
+
+.header p {
+  margin: 0px 0px 0px 0px;
+  font-family: 'Coolvetica', sans-serif;
+  font-size: 16px;
+}
+
+.header p a {
+  color: black;
+  margin-right: 0px;
+}
+
+.header p a:hover {
+  color: grey;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(110, 110, 110);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'normal-body', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Coolvetica', sans-serif;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  font-family: 'normal-body', sans-serif;
+  margin-top: auto;
+  background-color: rgb(255, 0, 0);
+  color: black;
+  border-top: 2px solid black;
+  font-size: 13px;
+  padding: 19px;
+}
+
+
+
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.page-grid .sidebar-left,
+.page-grid .sidebar-right {
+  background-color: #eee;
+  padding: 16px;
+}
+
+.page-grid .main {
+  background-color: #ddd;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-grid .sidebar-left,
+  .page-grid .sidebar-right {
+    display: none;
+  }
+
+  .page-grid .main {
+    width: 100%;
+  }
+}
