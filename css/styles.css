@@ -1,38 +1,36 @@
+/* ********************************************************************** */
+/*FONT TYPES*/
+
 @font-face {
   font-family: 'Coolvetica';
   src: url('../assets/fonts/Coolvetica Rg.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Alte Haas Grotesk';
   src: url('../assets/fonts/AlteHaasGroteskBold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'normal-body';
   src: url('../assets/fonts/LinLibertine_R.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'italics-body';
   src: url('../assets/fonts/LinLibertine_RI.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
   font-family: 'bold-body';
   src: url('../assets/fonts/LinLibertine_RZ.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'italics-bold-body';
   src: url('../assets/fonts/LinLibertine_RZI.ttf') format('truetype');
@@ -40,7 +38,10 @@
   font-style: italic;
 }
 
-.header {
+/* ********************************************************************** */
+/*HEADER*/
+
+.header { /*HEADER*/
   display: grid;
   grid-template-columns: 1fr;
   background-color: rgb(255, 255, 255);
@@ -50,49 +51,48 @@
   padding-bottom: 33px;
   text-align: left;
 }
-
-.header h1 {
+.header h1 { /*HEADER TITLE*/
   margin: 0px 0px 0px 0px;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-family: 'Coolvetica', sans-serif;
 }
-
-.header h1 a {
+.header h1 a { /*HEADER LINKS*/
   color: black;
 }
-
-.header p {
+.header p { /*HEADER LINKS*/
   margin: 0px 0px 0px 0px;
   font-family: 'Coolvetica', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
 }
-
-.header p a {
+.header p a { /*HEADER LINKS*/
   color: black;
   transition: color 0.15s;
   text-decoration: none;
   margin-right: 0px;
 }
-
-.header p a:hover {
+.header p a:hover { /*HEADER LINKS*/
   color: grey;
 }
 
-a {
+/* ********************************************************************** */
+/*LINKS*/
+
+a { /*ALL LINKS*/
   color: black;
   transition: color 0.15s;
   text-decoration: none;
 }
-
-a:hover {
+a:hover { /*ALL LINKS*/
   color: grey
 }
 
-html {
+/* ********************************************************************** */
+/*SCROLL TO TOP BUTTON*/
+
+html { /*SCROLL ALL PAGES*/
   scroll-behavior: smooth;
 }
-
-.back-to-top {
+.back-to-top { /*SCROLL ALL PAGES*/
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -108,42 +108,44 @@ html {
   border-radius: 5px;
 }
 
-html, body {
+/* ********************************************************************** */
+/*MAIN BODY*/
+
+html, body { /*ALL PAGES*/
   height: 100%;
   margin: 0;
 }
-
-body {
+body { /*ALL PAGES BODY*/
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: 'normal-body', sans-serif;
 }
-
-main {
+main { /*ALL PAGES BODY*/
   font-family: 'normal-body', sans-serif;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 { /*ALL PAGES HEADER*/
   font-family: 'Coolvetica', sans-serif;
 }
 
-.footer {
+/* ********************************************************************** */
+/*FOOTER*/
+
+.footer { /*ALL FOOTER*/
   display: grid;
   place-items: center;
   font-family: 'normal-body', sans-serif;
   margin-top: auto;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   color: black;
   border-top: 2px solid black;
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding: 19px;
 }
 
+/* ********************************************************************** */
 
-
-
-.page-grid {
+.page-grid { 
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   gap: 16px;
@@ -161,47 +163,19 @@ h1, h2, h3, h4, h5, h6 {
   padding: 16px;
 }
 
-@media (max-width: 768px) {
-  .page-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-grid .sidebar-left,
-  .page-grid .sidebar-right {
-    display: none;
-  }
-
-  .page-grid .main {
-    width: 100%;
-  }
-}
-
-/* Center and constrain all main page content */
 .content-wrapper {
-    max-width: 1100px;      /* centered width for desktop */
-    margin: 0 auto;         /* centers container */
-    padding: 1.5rem;        /* spacing from edges */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
-/* Make iframe fully responsive and centered */
-iframe {
+iframe { /*ALL MAP FRAME*/
     width: 100%;
     max-width: 100%;
     height: 500px;
     border: 2px solid black;
     display: block;
-    margin: 0 auto;         /* ensures centering */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .content-wrapper {
-        padding: 1rem;      /* smaller edge spacing */
-    }
-
-    iframe {
-        height: 400px;      /* reduce height for phone screens */
-    }
+    margin: 0 auto;
 }
 
 .header h1 a {
@@ -214,6 +188,63 @@ iframe {
     color: grey;
 }
 
+/* ********************************************************************** */
+/*IMAGE AND TEXT BODY*/
+
+.section-flex { /*ALL ON LEFT*/
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 1100px;
+  padding: 1rem;
+}
+.section-flex img { /*IMAGE ON LEFT*/
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 3px;
+}
+.section-flex .text { /*TEXT ON LEFT*/
+  flex: 1;
+}
+.section-flex.reverse { /*ALL ON RIGHT*/
+  flex-direction: row-reverse;
+}
+
+/* ********************************************************************** */
+/*MOBILE*/
+
+@media (max-width: 768px) {
+  .section-flex { /*ALL ON LEFT*/
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-flex img { /*IMAGE ON LEFT/RIGHT*/
+    max-width: 90%;
+  }
+  .section-flex.reverse { /*ALL ON RIGHT*/
+    flex-direction: column;
+  }
+  .content-wrapper { 
+    padding: 1rem;
+  }
+  iframe { /*MAP FRAME*/
+    height: 400px;
+  }
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-grid .sidebar-left,
+  .page-grid .sidebar-right {
+    display: none;
+  }
+  .page-grid .main {
+    width: 100%;
+  }
+}
+
+/*
 @media (max-width: 768px) {
 
     body {
@@ -232,3 +263,4 @@ iframe {
         font-size: 24px;
     }
 }
+*/
